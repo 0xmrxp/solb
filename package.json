@@ -1,0 +1,33 @@
+{
+  "name": "solb",
+  "version": "1.0.0",
+  "description": "Solidity Building Blocks — composable security primitives for smart contract development",
+  "main": "index.js",
+  "files": [
+    "contracts/"
+  ],
+  "scripts": {
+    "test": "forge test",
+    "build": "forge build",
+    "lint": "forge fmt --check"
+  },
+  "keywords": [
+    "solidity",
+    "smart-contracts",
+    "security",
+    "primitives",
+    "defi",
+    "foundry",
+    "evm"
+  ],
+  "author": "0xmrxp",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0xmrxp/solb"
+  },
+  "bugs": {
+    "url": "https://github.com/0xmrxp/solb/issues"
+  },
+  "homepage": "https://github.com/0xmrxp/solb#readme"
+}
