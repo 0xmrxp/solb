@@ -6,12 +6,6 @@ import { RevertLens } from "../../contracts/revert/RevertLens.sol";
 import { IRevertLens } from "../../contracts/revert/IRevertLens.sol";
 
 contract RevertLensTest is Test, RevertLens {
-    event RevertContext(
-        bytes4 indexed errorCode,
-        address indexed caller,
-        bytes context
-    );
-
     error TestError(uint256 value);
 
     function test_RevertIf_False_NoRevert() public {
