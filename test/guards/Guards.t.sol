@@ -66,7 +66,7 @@ contract GuardsTest is Test {
         uint256(1).equal(2);
     }
 
-    function test_notContract() public view {
+    function test_notContract() public pure {
         // address(1) has no deployed bytecode -> should pass through unchanged
         address addr = address(1).notContract();
         assertEq(addr, address(1));
