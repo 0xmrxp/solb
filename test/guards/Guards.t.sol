@@ -10,7 +10,7 @@ contract GuardsTest is Test {
     using Guards for address;
 
     function test_notZero_uint256() public pure {
-        uint256 val = 100.notZero();
+        uint256 val = uint256(100).notZero();
         assertEq(val, 100);
     }
 
