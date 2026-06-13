@@ -42,7 +42,7 @@ contract GuardsTest is Test {
     }
 
     function test_withinBounds() public pure {
-        uint256 val = 50.withinBounds(0, 100);
+        uint256 val = uint256(50).withinBounds(0, 100);
         assertEq(val, 50);
     }
 
@@ -57,7 +57,7 @@ contract GuardsTest is Test {
     }
 
     function test_equal() public pure {
-        uint256 val = 42.equal(42);
+        uint256 val = uint256(42).equal(42);
         assertEq(val, 42);
     }
 
