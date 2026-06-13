@@ -46,7 +46,12 @@ contract IntentBaseTest is Test {
     }
 
     function test_RegisterIntent_RevertInvalidDeadline() public {
-        vm.expectRevert(IIntentBase.IntentBase__InvalidDeadline.selector);
+        // Warp forward so that a deadline of 500 is in the past
+        vm.warp(1000);
+
+        vm.expectRevert(
+            abi.encodeWithSelector(IIntentBase.IntentBase__InvalidDeadline.selector, uint256(500))
+        );
         protocol.registerIntent(address(0), 500, 1, "");
     }
 
