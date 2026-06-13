@@ -14,7 +14,7 @@ runs = 1000
 
 [profile.default.invariant]
 runs = 256
-dept h = 15
+depth = 15
 
 [fmt]
 line_length = 100
